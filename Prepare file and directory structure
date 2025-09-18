@@ -1,0 +1,25 @@
+sudo mkdir -p /opt/paperless
+cd /opt/paperless
+
+mkdir consume media export data db redis
+---
+consume → Ordner, in den du neue Dokumente kopierst, damit Paperless sie verarbeitet
+media → Medien und PDFs etc.
+export → Exporte/Sicherungsdaten
+data → interne Daten (Search-Index, Modelle etc.)
+db → Datenbankdaten
+redis → Redis Daten
+---
+Path and files
+
+ /opt/paperless/docker-compose.yml
+ /opt/paperless/.env
+
+docker compose pull
+docker compose up -d
+
+http://yourip:8001
+
+
+
+
