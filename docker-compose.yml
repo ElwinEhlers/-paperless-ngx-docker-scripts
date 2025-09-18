@@ -1,0 +1,29 @@
+    restart: unless-stopped
+    volumes:
+      - ./redis:/data
+
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: paperless
+      POSTGRES_USER: paperless
+      POSTGRES_PASSWORD: securepassword
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+  webserver:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./consume:/usr/src/paperless/consume
+      - ./media:/usr/src/paperless/media
+      - ./export:/usr/src/paperless/export
+      - ./data:/usr/src/paperless/data
+    env_file:
+      - .env
