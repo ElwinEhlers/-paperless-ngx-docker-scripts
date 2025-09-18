@@ -36,6 +36,8 @@ docker exec -i paperless-db-1 psql -U paperless -d paperless -t -A -F","
 
 chmod +x export_with_original_names_host.sh
 
+touch original_filenames.csv
+
 ./export_with_original_names_host.sh
 
 
