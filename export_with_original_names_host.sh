@@ -4,9 +4,9 @@
 # ./media/documents/archive -> ./export
 
 DB_CSV="./original_filenames.csv"
-ARCHIVE_DIR="./media/documents/archive"
-EXPORT_DIR="./export"
-OVERVIEW="./documents_overview.txt"
+EXPORT_DIR="/opt/paperless/export"
+DB_CSV="/opt/paperless/original_filenames.csv"
+OVERVIEW="/opt/paperless/documents_overview.txt"
 
 mkdir -p "$EXPORT_DIR"
 > "$OVERVIEW"
