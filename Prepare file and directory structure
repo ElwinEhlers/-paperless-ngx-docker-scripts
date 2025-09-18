@@ -12,8 +12,8 @@ redis → Redis Daten
 ---info---
 Path and files
 
- /opt/paperless/docker-compose.yml
- /opt/paperless/.env
+nano /opt/paperless/docker-compose.yml
+nano /opt/paperless/.env
 
 docker compose pull
 docker compose up -d
