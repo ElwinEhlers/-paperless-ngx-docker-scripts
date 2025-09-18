@@ -24,6 +24,7 @@ http://yourip:8001
 storagepaths (edit in the GUI)
 {{ correspondent }}/{{ created_year }}/{{ original_name }}
 ---
+
 Nginx Proxy Manager for https
 
 ---
