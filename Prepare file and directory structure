@@ -20,6 +20,14 @@ docker compose up -d
 
 http://yourip:8001
 
+---
+storagepaths (edit in the GUI)
+{{ correspondent }}/{{ created_year }}/{{ original_name }}
+---
+Nginx Proxy Manager for https
+
+---
+optional if needed:
 bash:
 
 docker exec -i paperless-db-1 psql -U paperless -d paperless -t -A -F","
@@ -29,11 +37,6 @@ chmod +x export_with_original_names_host.sh
 
 ./export_with_original_names_host.sh
 
----
-storagepaths (edit in the GUI)
-{{ correspondent }}/{{ created_year }}/{{ original_name }}
----
-Nginx Proxy Manager for https
 
 
 
