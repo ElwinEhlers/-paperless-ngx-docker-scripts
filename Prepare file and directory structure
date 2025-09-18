@@ -1,7 +1,7 @@
 sudo mkdir -p /opt/paperless
 cd /opt/paperless
 
-mkdir consume media export data db redis
+sudo mkdir consume media export data db redis
 ---info---
 consume → Ordner, in den du neue Dokumente kopierst, damit Paperless sie verarbeitet
 media → Medien und PDFs etc.
